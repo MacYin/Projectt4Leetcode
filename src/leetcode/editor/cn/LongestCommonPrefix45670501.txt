@@ -1,0 +1,24 @@
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        String temp = strs[0];
+        for( String str : strs ) {
+            if( temp.length() >= str.length() ) {
+                temp = str;
+            }
+        }
+        for( String str : strs ) {
+
+            for( int i = temp.length() - 1; i >= 0; i-- ) {
+                if(str.charAt( i ) != temp.charAt( i )){
+                    temp = temp.substring( 0, i );
+                }
+            }
+        }
+
+        return temp;
+
+    }
+}
+
+//runtime_error:Line 3: java.lang.ArrayIndexOutOfBoundsException: 0
+//last_testcase:[]

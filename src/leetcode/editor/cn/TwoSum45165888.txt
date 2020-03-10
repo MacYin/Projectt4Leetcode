@@ -1,0 +1,32 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[ 2 ];
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for( int i = 0; i < nums.length; i++ ) {
+            map.put( nums[i], i );
+        }
+
+        int x = 0;
+        int y = 0;
+
+        for( int i = 0; i < nums.length - 1; i++ ) {
+            x = nums[i];
+            for( int j = i; j < nums.length; j++ ) {
+                y = nums[j];
+                if( x + y == target ){
+                    result[0] = map.get( x );
+                    result[1] = map.get( y );
+                }
+            }
+        }
+
+        return result;
+    }
+}
+
+//total_testcases:29
+//total_correct:17
+//input_formatted:[3,3], 6
+//expected_output:[0,1]
+//code_output:[1,1]
