@@ -27,8 +27,25 @@ public class ReverseLinkedList{
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
+        // 迭代
+//        ListNode prev = null;
+//        ListNode curr = head;
+//        while( curr != null ) {
+//            ListNode temp = curr.next;
+//            curr.next = prev;
+//            prev = curr;
+//            curr = temp;
+//        }
+//        return prev;
 
-        return null;
+        // 递归
+        if( head == null || head.next == null){
+            return head;
+        }
+        ListNode p = reverseList( head.next );
+        head.next.next = head;
+        head.next = null;
+        return p;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
