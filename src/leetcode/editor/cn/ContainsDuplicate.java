@@ -23,7 +23,6 @@
 package leetcode.editor.cn;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class ContainsDuplicate{
     public static void main(String[] args) {

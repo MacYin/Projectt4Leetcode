@@ -9,8 +9,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.List;
-
 public class MergeTwoSortedLists{
     public static void main(String[] args) {
         Solution solution = new MergeTwoSortedLists().new Solution();

@@ -22,8 +22,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.HashMap;
-
 public class LongestCommonPrefix{
     public static void main(String[] args) {
         Solution solution = new LongestCommonPrefix().new Solution();

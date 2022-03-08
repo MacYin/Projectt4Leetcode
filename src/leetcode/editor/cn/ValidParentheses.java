@@ -41,7 +41,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.HashMap;
 import java.util.Stack;
 
 public class ValidParentheses{
